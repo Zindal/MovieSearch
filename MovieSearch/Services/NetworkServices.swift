@@ -15,6 +15,8 @@ class NetworkServices {
 
     private let decoder = JSONDecoder()
     static let APIKEY = "4524dbe1cb31c1afbf85b85e0f8963c2"
+    let baseImgURL = "https://image.tmdb.org/t/p/w500"
+
     typealias Completion<T> = (RequestResult<T>) -> Void
     
     public func getMovieList(page:Int,completion: @escaping Completion<MovieListModel>) {

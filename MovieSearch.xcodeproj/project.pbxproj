@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8D92DA1CBA0E667D2B9BD9D0 /* Pods_MovieSearch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0383E3470C1E03C229910491 /* Pods_MovieSearch.framework */; };
+		BB697313253C82AE00C3F3A7 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB697312253C82AE00C3F3A7 /* SearchViewController.swift */; };
+		BB697315253C868D00C3F3A7 /* SearchTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB697314253C868D00C3F3A7 /* SearchTblCell.xib */; };
+		BB697317253C86AB00C3F3A7 /* SearchTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB697316253C86AB00C3F3A7 /* SearchTblCell.swift */; };
 		BB69D497253BEEA100559EE6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB69D496253BEEA100559EE6 /* AppDelegate.swift */; };
 		BB69D49B253BEEA100559EE6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB69D49A253BEEA100559EE6 /* HomeViewController.swift */; };
 		BB69D49E253BEEA200559EE6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BB69D49C253BEEA200559EE6 /* Main.storyboard */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		0383E3470C1E03C229910491 /* Pods_MovieSearch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovieSearch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		681A63BE29EF4D0513E7D94A /* Pods-MovieSearch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MovieSearch.debug.xcconfig"; path = "Target Support Files/Pods-MovieSearch/Pods-MovieSearch.debug.xcconfig"; sourceTree = "<group>"; };
+		BB697312253C82AE00C3F3A7 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		BB697314253C868D00C3F3A7 /* SearchTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchTblCell.xib; sourceTree = "<group>"; };
+		BB697316253C86AB00C3F3A7 /* SearchTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTblCell.swift; sourceTree = "<group>"; };
 		BB69D493253BEEA100559EE6 /* MovieSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BB69D496253BEEA100559EE6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BB69D49A253BEEA100559EE6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +106,8 @@
 			children = (
 				BB69D4B8253C050300559EE6 /* MovieListCVCell.swift */,
 				BB69D4B7253C050300559EE6 /* MovieListCVCell.xib */,
+				BB697316253C86AB00C3F3A7 /* SearchTblCell.swift */,
+				BB697314253C868D00C3F3A7 /* SearchTblCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -125,6 +133,7 @@
 			children = (
 				BB69D49A253BEEA100559EE6 /* HomeViewController.swift */,
 				BB69D4D8253C0AC800559EE6 /* MovieDetailViewController.swift */,
+				BB697312253C82AE00C3F3A7 /* SearchViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -217,6 +226,7 @@
 				BB69D4BB253C050300559EE6 /* MovieListCVCell.xib in Resources */,
 				BB69D4A3253BEEA700559EE6 /* LaunchScreen.storyboard in Resources */,
 				BB69D4A0253BEEA700559EE6 /* Assets.xcassets in Resources */,
+				BB697315253C868D00C3F3A7 /* SearchTblCell.xib in Resources */,
 				BB69D49E253BEEA200559EE6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,10 +282,12 @@
 			files = (
 				BB69D4B2253BFA8C00559EE6 /* MovieListModel.swift in Sources */,
 				BB69D4DB253C0FA900559EE6 /* MovieInfoViewModel.swift in Sources */,
+				BB697313253C82AE00C3F3A7 /* SearchViewController.swift in Sources */,
 				BB69D4B0253BF92400559EE6 /* NetworkServices.swift in Sources */,
 				BB69D49B253BEEA100559EE6 /* HomeViewController.swift in Sources */,
 				BB69D4D9253C0AC800559EE6 /* MovieDetailViewController.swift in Sources */,
 				BB69D4BC253C050300559EE6 /* MovieListCVCell.swift in Sources */,
+				BB697317253C86AB00C3F3A7 /* SearchTblCell.swift in Sources */,
 				BB69D497253BEEA100559EE6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,10 +440,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pomelo.pickupwatch.MovieSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zindal.MovieSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -447,10 +459,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.pomelo.pickupwatch.MovieSearch;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zindal.MovieSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
