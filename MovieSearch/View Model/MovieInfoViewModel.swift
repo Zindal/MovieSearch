@@ -48,7 +48,7 @@ class MovieInfoViewModel: Decodable {
         let date = try container.decode(String.self, forKey: .release_date)
         dateFormatter.dateFormat = "yyyy-MM-dd"
         let currentDate = dateFormatter.date(from: date)
-        dateFormatter.dateFormat = "dd MMM, yyyy"
+        dateFormatter.dateFormat = "dd MMM yyyy"
         release_date = dateFormatter.string(from: currentDate ?? Date())
         dateFormatter.dateFormat = "yyyy-MM-dd"
         
