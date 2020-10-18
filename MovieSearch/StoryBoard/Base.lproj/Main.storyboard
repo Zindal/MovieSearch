@@ -381,10 +381,6 @@
                                     <outlet property="delegate" destination="1ho-Bc-X25" id="3aq-XA-cGK"/>
                                 </connections>
                             </tableView>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="Dxc-Q1-nP1">
-                                <rect key="frame" x="188.5" y="462.5" width="37" height="37"/>
-                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -394,16 +390,13 @@
                             <constraint firstItem="imS-54-fCB" firstAttribute="trailing" secondItem="eSc-I1-2bd" secondAttribute="trailing" constant="-16" id="Ne3-z8-kRa"/>
                             <constraint firstItem="eSc-I1-2bd" firstAttribute="bottom" secondItem="h8a-4u-ePH" secondAttribute="bottom" id="QgY-qE-dtA"/>
                             <constraint firstItem="xrM-Gp-N8c" firstAttribute="centerY" secondItem="eSc-I1-2bd" secondAttribute="centerY" id="Qgc-yt-9hT"/>
-                            <constraint firstItem="Dxc-Q1-nP1" firstAttribute="centerY" secondItem="h8a-4u-ePH" secondAttribute="centerY" id="YFD-zf-CIi"/>
                             <constraint firstItem="h8a-4u-ePH" firstAttribute="top" secondItem="imS-54-fCB" secondAttribute="bottom" id="aDJ-l5-Wfa"/>
-                            <constraint firstItem="Dxc-Q1-nP1" firstAttribute="centerX" secondItem="h8a-4u-ePH" secondAttribute="centerX" id="h9J-D0-kA3"/>
                             <constraint firstItem="imS-54-fCB" firstAttribute="leading" secondItem="eSc-I1-2bd" secondAttribute="leading" constant="16" id="j3S-Zi-idK"/>
                             <constraint firstItem="h8a-4u-ePH" firstAttribute="leading" secondItem="eSc-I1-2bd" secondAttribute="leading" id="wLs-ec-rDT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eSc-I1-2bd"/>
                     </view>
                     <connections>
-                        <outlet property="activityIndicator" destination="Dxc-Q1-nP1" id="xBB-63-MFa"/>
                         <outlet property="lblMessage" destination="xrM-Gp-N8c" id="M4i-8I-8xI"/>
                         <outlet property="searchBar" destination="imS-54-fCB" id="ucX-cZ-Pkn"/>
                         <outlet property="tblView" destination="h8a-4u-ePH" id="NAX-l0-JEX"/>

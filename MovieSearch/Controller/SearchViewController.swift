@@ -12,7 +12,6 @@ class SearchViewController: UIViewController {
 
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var tblView: UITableView!
-    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     var pageCount : Int! = 1
     var movieModel: [MovieInfoViewModel]! = []
     @IBOutlet var lblMessage: UILabel!
