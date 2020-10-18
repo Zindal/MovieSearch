@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
     var pageCount : Int! = 1
     var movieModel: [MovieInfoViewModel]! = []
+    var totalPages: Int?
     
     // MARK: Life cycle
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class HomeViewController: UIViewController {
     
     // MARK: Fetch Movie List with page count
     func fetchList(){
+                
         activityIndicator.startAnimating()
         NetworkServices.shared.getMovieList(page: pageCount) { (result) in
             DispatchQueue.main.async {
@@ -48,6 +50,7 @@ class HomeViewController: UIViewController {
     }
     
     func handleSuccessResponse(response:MovieListModel) {
+        self.totalPages = response.total_pages
         self.movieModel.append(contentsOf: response.resultInfo ?? [])
         self.collectionView.isHidden = false
         self.lblMessage.isHidden = true
@@ -56,7 +59,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func btnSearchClicked(_ sender: Any) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "SearchViewController") as! SearchViewController
-        self.present(vc, animated: false, completion: nil)
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
 }
@@ -83,8 +86,10 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         
         if indexPath.row == (movieModel.count - 1) {
-          self.pageCount += 1
-          self.fetchList()
+            if (self.pageCount + 1) < (self.totalPages ?? 1) {
+                self.pageCount += 1
+                self.fetchList()
+            }
         }
     }
     

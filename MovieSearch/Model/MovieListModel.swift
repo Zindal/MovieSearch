@@ -18,7 +18,7 @@ class MovieListModel: Decodable {
     let resultInfo:[MovieInfoViewModel]?
     let page: Int?
     let total_results: Double?
-    let total_pages: Double?
+    let total_pages: Int?
     
     private enum CodingKeys: String, CodingKey {
         case results
@@ -32,7 +32,7 @@ class MovieListModel: Decodable {
         resultInfo = try container.decode([MovieInfoViewModel].self, forKey: .results)
         page = try container.decode(Int.self, forKey: .page)
         total_results = try container.decode(Double.self, forKey: .total_results)
-        total_pages = try container.decode(Double.self, forKey: .total_pages)
+        total_pages = try container.decode(Int.self, forKey: .total_pages)
     }
     
 }

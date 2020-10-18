@@ -20,6 +20,8 @@ class MovieInfoViewModel: Decodable {
     let overview: String?
     let release_date: String?
 
+    let dateFormatter = DateFormatter()
+    
     private enum CodingKeys: String, CodingKey {
         case popularity
         case vote_count
@@ -42,7 +44,14 @@ class MovieInfoViewModel: Decodable {
         original_title = try container.decode(String.self, forKey: .original_title)
         vote_average = try container.decode(Float.self, forKey: .vote_average)
         overview = try container.decode(String.self, forKey: .overview)
-        release_date = try container.decode(String.self, forKey: .release_date)
+        
+        let date = try container.decode(String.self, forKey: .release_date)
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        let currentDate = dateFormatter.date(from: date)
+        dateFormatter.dateFormat = "dd MMM, yyyy"
+        release_date = dateFormatter.string(from: currentDate ?? Date())
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
     }
     
 }

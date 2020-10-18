@@ -37,4 +37,24 @@ class NetworkServices {
                 }
         }
     }
+    
+    public func searchMovieList(page:Int,query:String,completion: @escaping Completion<MovieListModel>) {
+        
+        let requestUrlString = "https://api.themoviedb.org/3/search/movie?api_key=" + NetworkServices.APIKEY + "&page=" + "\(page)" + "&query=" + query.replacingOccurrences(of: " ", with: "%20")
+        
+        AF.request(requestUrlString, headers: nil)
+            .responseJSON { response in
+                if response.error != nil {
+                    completion(.failure(error: "Failed to fetch data"))
+                } else {
+                    do {
+                        let results = try self.decoder.decode(MovieListModel.self, from: response.data ?? Data())
+                        completion(.success(object: results))
+                    } catch {
+                        completion(.failure(error: "Failed to fetch data"))
+                    }
+                }
+        }
+    }
+
 }

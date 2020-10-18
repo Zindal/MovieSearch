@@ -79,9 +79,6 @@
                         <constraint firstItem="h7M-Yw-B2V" firstAttribute="leading" secondItem="BcV-92-55m" secondAttribute="leading" id="aBI-8k-Ksw"/>
                         <constraint firstAttribute="trailing" secondItem="h7M-Yw-B2V" secondAttribute="trailing" id="fnK-5Y-SZG"/>
                     </constraints>
-                    <userDefinedRuntimeAttributes>
-                        <userDefinedRuntimeAttribute type="image" keyPath="backgroundImage" value="img1.png"/>
-                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -102,7 +99,6 @@
         </view>
     </objects>
     <resources>
-        <image name="img1.png" width="640" height="1136"/>
         <image name="star" width="64" height="64"/>
     </resources>
 </document>
